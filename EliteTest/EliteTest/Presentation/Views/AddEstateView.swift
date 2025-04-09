@@ -30,12 +30,38 @@ struct AddEstateView: View {
                     VStack(spacing: 24) {
                         titleView()
                         formView()
+                            .disabled(viewModel.isLoading)
+                                        .blur(radius: viewModel.isLoading ? 3 : 0)
                     }
                     .padding(.horizontal)
                 }
+                
+                if viewModel.isLoading {
+                    VStack {
+                        ProgressView("Guardando propiedad...")
+                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                            .padding()
+                            .background(.ultraThinMaterial)
+                            .cornerRadius(12)
+                            .shadow(radius: 10)
+                    }
+                    .transition(.opacity)
+                    .zIndex(1)
+                }
             }
-        } .sheet(isPresented: $viewModel.showPhotoPicker) {
+
+        }
+        .animation(.easeInOut, value: viewModel.isLoading)
+        .sheet(isPresented: $viewModel.showPhotoPicker) {
             PhotoPicker(selectedImages: $viewModel.selectedImages)
+            
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text(viewModel.isSuccessAlert ? "Éxito" : "Error"),
+                message: Text(viewModel.alertMessage),
+                dismissButton: .default(Text("OK"))
+            )
         }
     }
     
@@ -87,10 +113,8 @@ struct AddEstateView: View {
             .foregroundColor(.white)
             .font(.subheadline.bold())
         Picker("Tipo de propiedad", selection: $viewModel.type) {
-            ForEach(["Apartamento", "Casa", "Estudio"], id: \.self) {
+            ForEach(viewModel.estateTypes, id: \.self) {
                 Text($0)
-                .foregroundColor(viewModel.type == $0 ? .black : .white)
-                .font(.subheadline.bold())
             }
         }
         .pickerStyle(SegmentedPickerStyle())
@@ -138,9 +162,8 @@ struct AddEstateView: View {
     @ViewBuilder private func googleMapsView() -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Ubicación de la Propiedad")
-                .foregroundColor(.red)
-                .font(.subheadline).bold()
-            
+                .font(.title3.bold())
+                .foregroundColor(.white)
             GoogleMapView(selectedCoordinate: $viewModel.propertyLocation)
                 .frame(height: 300)
                 .cornerRadius(8)
@@ -171,8 +194,8 @@ struct AddEstateView: View {
             }
             ImageGridView(images: $viewModel.selectedImages, draggedItem: viewModel.selectedImages.first)
             
-            if viewModel.isPhotosValid {
-                Image(systemName: "exclamationmark.triangle.fill")
+            if !viewModel.isPhotosValid {
+                Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.red)
                 Text("Agrega al menos 5 fotos")
                     .foregroundColor(.red)
                     .font(.subheadline).bold()
@@ -205,16 +228,6 @@ struct AddEstateView: View {
 }
 
 struct AddEstateView_Previews: PreviewProvider {
-    class MockRepository: EstateRepositoryProtocol {
-        func save(estate: EstateModel) {
-            print("Mock Save: \(estate.title)")
-        }
-        
-        func fetchAll() -> AnyPublisher<[EstateModel], Never> {
-            Just([]).eraseToAnyPublisher()
-        }
-    }
-    
     static var previews: some View {
         AddEstateView(viewModel: AddEstateViewModel())
             .preferredColorScheme(.light)

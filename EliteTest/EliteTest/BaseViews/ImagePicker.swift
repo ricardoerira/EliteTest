@@ -14,8 +14,8 @@ struct PhotoPicker: UIViewControllerRepresentable {
 
     func makeUIViewController(context: Context) -> PHPickerViewController {
         var configuration = PHPickerConfiguration()
-        configuration.filter = .images // Select only images
-        configuration.selectionLimit = 5 // Limit selection to 5 images
+        configuration.filter = .images
+        configuration.selectionLimit = 5
 
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = context.coordinator
@@ -56,7 +56,6 @@ struct PhotoPicker: UIViewControllerRepresentable {
             }
 
             group.notify(queue: .main) {
-                // All images have been loaded
             }
         }
     }

@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Combine
 
 protocol EstateRepositoryProtocol {
-    func save(estate: EstateModel)
+    func save(estate: EstateModel) -> AnyPublisher<Void, EstateRepositoryError>
 }

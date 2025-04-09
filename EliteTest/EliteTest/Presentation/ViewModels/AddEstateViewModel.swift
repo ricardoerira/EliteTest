@@ -17,6 +17,7 @@ struct ImageItem: Identifiable, Equatable {
 }
 
 class AddEstateViewModel: ObservableObject {
+    @Published var estateTypes : [String] = ["Apartamento", "Casa", "Estudio"]
     @Published var type: String = "Apartamento"
     @Published var maxGuests: Int = 1
     @Published var beds: Int = 1
@@ -31,6 +32,11 @@ class AddEstateViewModel: ObservableObject {
     @Published var isDescriptionValid: Bool = true
     @Published var selectedImages: [ImageItem] = []
     @Published var showPhotoPicker = false
+    @Published var showAlert: Bool = false
+    @Published var alertMessage: String = ""
+    @Published var isSuccessAlert: Bool = false
+    @Published var isLoading = false
+    
     private var cancellables = Set<AnyCancellable>()
     private let repository: EstateRepositoryProtocol
     
@@ -47,7 +53,6 @@ class AddEstateViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-
     
     private func validateFields(title: String, description: String, selectedImages: [ImageItem], location: CLLocationCoordinate2D?) {
         let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -59,7 +64,20 @@ class AddEstateViewModel: ObservableObject {
         isFormValid = isTitleValid && isDescriptionValid && isLocationValid && isPhotosValid
     }
     
+    func clearForm() {
+        type = ""
+        maxGuests = 1
+        beds = 1
+        bathrooms = 1
+        title = ""
+        description = ""
+        selectedImages = []
+        propertyLocation = nil
+    }
+    
     func createProperty() {
+        isLoading = true
+        
         let estateModel = EstateModel(
             id: UUID(),
             type: type,
@@ -68,8 +86,25 @@ class AddEstateViewModel: ObservableObject {
             bathrooms: bathrooms,
             title: title,
             description: description,
-            photos: selectedImages.compactMap { $0.image.jpegData(compressionQuality: 0.8) }
+            photos: selectedImages.compactMap { $0.image.jpegData(compressionQuality: 0.8) }, location: "\(String(describing: propertyLocation?.latitude)),\(String(describing: propertyLocation?.longitude))"
         )
+        
         repository.save(estate: estateModel)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                self?.isLoading = false
+                switch completion {
+                case .finished:
+                    self?.isSuccessAlert = true
+                    self?.alertMessage = "Propiedad registrada con éxito."
+                    self?.showAlert = true
+                    self?.clearForm()
+                case .failure(let error):
+                    self?.isSuccessAlert = false
+                    self?.alertMessage = "Error: \(error.localizedDescription)"
+                    self?.showAlert = true
+                }
+            } receiveValue: {}
+            .store(in: &cancellables)
     }
 }

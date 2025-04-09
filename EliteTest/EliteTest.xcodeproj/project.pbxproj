@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		416514A02DA6F9DA00B35A03 /* EstatePhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165149E2DA6F9DA00B35A03 /* EstatePhotoEntity.swift */; };
 		41652A2C2DA5701C00213163 /* EliteTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A2B2DA5701C00213163 /* EliteTestApp.swift */; };
 		41652A302DA5701F00213163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41652A2F2DA5701F00213163 /* Assets.xcassets */; };
 		41652A332DA5701F00213163 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41652A322DA5701F00213163 /* Preview Assets.xcassets */; };
 		41652A382DA5701F00213163 /* EliteTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41652A362DA5701F00213163 /* EliteTest.xcdatamodeld */; };
 		41652A422DA5701F00213163 /* EliteTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A412DA5701F00213163 /* EliteTestTests.swift */; };
-		41652A4C2DA5702000213163 /* EliteTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A4B2DA5702000213163 /* EliteTestUITests.swift */; };
-		41652A4E2DA5702000213163 /* EliteTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A4D2DA5702000213163 /* EliteTestUITestsLaunchTests.swift */; };
 		41652A642DA5747600213163 /* AddEstateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A632DA5747600213163 /* AddEstateView.swift */; };
 		41652A682DA5749900213163 /* AddEstateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A672DA5749900213163 /* AddEstateViewModel.swift */; };
 		41652A6A2DA575F500213163 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A692DA575F500213163 /* HeaderView.swift */; };
@@ -22,8 +19,8 @@
 		41652A702DA576AC00213163 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A6F2DA576AC00213163 /* PersistenceController.swift */; };
 		41652A732DA57AD300213163 /* EstateRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A722DA57AD300213163 /* EstateRepositoryProtocol.swift */; };
 		41652A762DA57B5A00213163 /* EstateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A752DA57B5A00213163 /* EstateRepository.swift */; };
-		41652A792DA57C3200213163 /* EstateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41652A772DA57C3200213163 /* EstateEntity.swift */; };
 		416F079A2DA585C700AF61B1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416F07992DA585C700AF61B1 /* ViewExtensions.swift */; };
+		417A9E772DA72E63007F55DE /* EstateRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A9E762DA72E63007F55DE /* EstateRepositoryTest.swift */; };
 		4186A4222DA5B97500983978 /* StepperFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4186A4212DA5B97500983978 /* StepperFieldView.swift */; };
 		4186A4262DA5C54900983978 /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4186A4252DA5C54900983978 /* TextEditorView.swift */; };
 		4186A42F2DA5EA5200983978 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 4186A42E2DA5EA5200983978 /* GoogleMaps */; };
@@ -41,17 +38,9 @@
 			remoteGlobalIDString = 41652A272DA5701C00213163;
 			remoteInfo = EliteTest;
 		};
-		41652A482DA5702000213163 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 41652A202DA5701C00213163 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 41652A272DA5701C00213163;
-			remoteInfo = EliteTest;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4165149E2DA6F9DA00B35A03 /* EstatePhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstatePhotoEntity.swift; sourceTree = "<group>"; };
 		41652A282DA5701C00213163 /* EliteTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EliteTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41652A2B2DA5701C00213163 /* EliteTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliteTestApp.swift; sourceTree = "<group>"; };
 		41652A2F2DA5701F00213163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,9 +48,6 @@
 		41652A372DA5701F00213163 /* EliteTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EliteTest.xcdatamodel; sourceTree = "<group>"; };
 		41652A3D2DA5701F00213163 /* EliteTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EliteTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41652A412DA5701F00213163 /* EliteTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliteTestTests.swift; sourceTree = "<group>"; };
-		41652A472DA5702000213163 /* EliteTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EliteTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		41652A4B2DA5702000213163 /* EliteTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliteTestUITests.swift; sourceTree = "<group>"; };
-		41652A4D2DA5702000213163 /* EliteTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliteTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		41652A632DA5747600213163 /* AddEstateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEstateView.swift; sourceTree = "<group>"; };
 		41652A672DA5749900213163 /* AddEstateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEstateViewModel.swift; sourceTree = "<group>"; };
 		41652A692DA575F500213163 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -69,8 +55,8 @@
 		41652A6F2DA576AC00213163 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		41652A722DA57AD300213163 /* EstateRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateRepositoryProtocol.swift; sourceTree = "<group>"; };
 		41652A752DA57B5A00213163 /* EstateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateRepository.swift; sourceTree = "<group>"; };
-		41652A772DA57C3200213163 /* EstateEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateEntity.swift; sourceTree = "<group>"; };
 		416F07992DA585C700AF61B1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		417A9E762DA72E63007F55DE /* EstateRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateRepositoryTest.swift; sourceTree = "<group>"; };
 		4186A4212DA5B97500983978 /* StepperFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperFieldView.swift; sourceTree = "<group>"; };
 		4186A4252DA5C54900983978 /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
 		4186A4302DA5EBBB00983978 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
@@ -95,13 +81,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41652A442DA5702000213163 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,7 +89,6 @@
 			children = (
 				41652A2A2DA5701C00213163 /* EliteTest */,
 				41652A402DA5701F00213163 /* EliteTestTests */,
-				41652A4A2DA5702000213163 /* EliteTestUITests */,
 				41652A292DA5701C00213163 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,7 +98,6 @@
 			children = (
 				41652A282DA5701C00213163 /* EliteTest.app */,
 				41652A3D2DA5701F00213163 /* EliteTestTests.xctest */,
-				41652A472DA5702000213163 /* EliteTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,7 +112,6 @@
 				41652A5B2DA5722000213163 /* Domain */,
 				41652A2B2DA5701C00213163 /* EliteTestApp.swift */,
 				41652A2F2DA5701F00213163 /* Assets.xcassets */,
-				41652A362DA5701F00213163 /* EliteTest.xcdatamodeld */,
 				41652A312DA5701F00213163 /* Preview Content */,
 			);
 			path = EliteTest;
@@ -152,18 +128,10 @@
 		41652A402DA5701F00213163 /* EliteTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				417A9E742DA72E2F007F55DE /* Data */,
 				41652A412DA5701F00213163 /* EliteTestTests.swift */,
 			);
 			path = EliteTestTests;
-			sourceTree = "<group>";
-		};
-		41652A4A2DA5702000213163 /* EliteTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				41652A4B2DA5702000213163 /* EliteTestUITests.swift */,
-				41652A4D2DA5702000213163 /* EliteTestUITestsLaunchTests.swift */,
-			);
-			path = EliteTestUITests;
 			sourceTree = "<group>";
 		};
 		41652A5B2DA5722000213163 /* Domain */ = {
@@ -242,8 +210,7 @@
 		41652A6E2DA5769800213163 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				4165149E2DA6F9DA00B35A03 /* EstatePhotoEntity.swift */,
-				41652A772DA57C3200213163 /* EstateEntity.swift */,
+				41652A362DA5701F00213163 /* EliteTest.xcdatamodeld */,
 				41652A6F2DA576AC00213163 /* PersistenceController.swift */,
 			);
 			path = CoreData;
@@ -263,6 +230,22 @@
 				41652A752DA57B5A00213163 /* EstateRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		417A9E742DA72E2F007F55DE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				417A9E752DA72E3B007F55DE /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		417A9E752DA72E3B007F55DE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				417A9E762DA72E63007F55DE /* EstateRepositoryTest.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,24 +289,6 @@
 			productReference = 41652A3D2DA5701F00213163 /* EliteTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		41652A462DA5702000213163 /* EliteTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 41652A572DA5702000213163 /* Build configuration list for PBXNativeTarget "EliteTestUITests" */;
-			buildPhases = (
-				41652A432DA5702000213163 /* Sources */,
-				41652A442DA5702000213163 /* Frameworks */,
-				41652A452DA5702000213163 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				41652A492DA5702000213163 /* PBXTargetDependency */,
-			);
-			name = EliteTestUITests;
-			productName = EliteTestUITests;
-			productReference = 41652A472DA5702000213163 /* EliteTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -338,10 +303,6 @@
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					41652A3C2DA5701F00213163 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 41652A272DA5701C00213163;
-					};
-					41652A462DA5702000213163 = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = 41652A272DA5701C00213163;
 					};
@@ -365,7 +326,6 @@
 			targets = (
 				41652A272DA5701C00213163 /* EliteTest */,
 				41652A3C2DA5701F00213163 /* EliteTestTests */,
-				41652A462DA5702000213163 /* EliteTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,13 +347,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41652A452DA5702000213163 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -402,8 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				416F079A2DA585C700AF61B1 /* ViewExtensions.swift in Sources */,
-				41652A792DA57C3200213163 /* EstateEntity.swift in Sources */,
-				416514A02DA6F9DA00B35A03 /* EstatePhotoEntity.swift in Sources */,
 				4186A4332DA5EE0700983978 /* LocationManager.swift in Sources */,
 				41652A702DA576AC00213163 /* PersistenceController.swift in Sources */,
 				41652A732DA57AD300213163 /* EstateRepositoryProtocol.swift in Sources */,
@@ -427,15 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41652A422DA5701F00213163 /* EliteTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41652A432DA5702000213163 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41652A4E2DA5702000213163 /* EliteTestUITestsLaunchTests.swift in Sources */,
-				41652A4C2DA5702000213163 /* EliteTestUITests.swift in Sources */,
+				417A9E772DA72E63007F55DE /* EstateRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +389,6 @@
 			isa = PBXTargetDependency;
 			target = 41652A272DA5701C00213163 /* EliteTest */;
 			targetProxy = 41652A3E2DA5701F00213163 /* PBXContainerItemProxy */;
-		};
-		41652A492DA5702000213163 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 41652A272DA5701C00213163 /* EliteTest */;
-			targetProxy = 41652A482DA5702000213163 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -665,40 +603,6 @@
 			};
 			name = Release;
 		};
-		41652A582DA5702000213163 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = RicardoErira.EliteTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EliteTest;
-			};
-			name = Debug;
-		};
-		41652A592DA5702000213163 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = RicardoErira.EliteTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EliteTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -725,15 +629,6 @@
 			buildConfigurations = (
 				41652A552DA5702000213163 /* Debug */,
 				41652A562DA5702000213163 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		41652A572DA5702000213163 /* Build configuration list for PBXNativeTarget "EliteTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				41652A582DA5702000213163 /* Debug */,
-				41652A592DA5702000213163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

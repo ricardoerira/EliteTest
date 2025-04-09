@@ -16,6 +16,7 @@ struct EliteTestApp: App {
     }
     
     var body: some Scene {
+        
         WindowGroup {
             AddEstateView(viewModel: AddEstateViewModel())
         }

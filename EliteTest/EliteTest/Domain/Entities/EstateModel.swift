@@ -15,5 +15,6 @@ struct EstateModel: Identifiable {
     var bathrooms: Int
     var title: String
     var description: String
-    var photos: [Data] // UIImage as Data
+    var photos: [Data]
+    var location: String
 }
