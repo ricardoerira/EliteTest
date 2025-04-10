@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A73EB8F3-9919-48C7-9641-3AE3EEA48A0E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F059592-DCDD-4B94-9F93-CAB5F457C6CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EliteTest/Base/ImageGridView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EAC2B45-3650-48F5-872B-EA4613CFECE1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EliteTest/Presentation/ViewModels/AddEstateViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "createEstate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B724DE4A-B1FD-4395-AFF6-EBB240EE201F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "setUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B724DE4A-B1FD-4395-AFF6-EBB240EE201F - 423f34f4ca9feca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EliteTestTests.EstateRepositoryTests.setUp() -&gt; ()"
+                  moduleName = "EliteTestTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andres/Documents/Elite/EliteTest/EliteTest/EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "325">
+               </Location>
+               <Location
+                  uuid = "B724DE4A-B1FD-4395-AFF6-EBB240EE201F - 423f34f4ca9feca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EliteTestTests.EstateRepositoryTests.setUp() -&gt; ()"
+                  moduleName = "EliteTestTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andres/Documents/Elite/EliteTest/EliteTest/EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "103">
+               </Location>
+               <Location
+                  uuid = "B724DE4A-B1FD-4395-AFF6-EBB240EE201F - 423f34f4ca9feca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EliteTestTests.EstateRepositoryTests.setUp() -&gt; ()"
+                  moduleName = "EliteTestTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andres/Documents/Elite/EliteTest/EliteTest/EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "251">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9D10423-6820-4F07-86A9-7652B24CCFEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "testSaveEstateSuccessfully()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C9D10423-6820-4F07-86A9-7652B24CCFEA - a843e56cd8d68230"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EliteTestTests.EstateRepositoryTests.testSaveEstateSuccessfully() -&gt; ()"
+                  moduleName = "EliteTestTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andres/Documents/Elite/EliteTest/EliteTest/EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "785">
+               </Location>
+               <Location
+                  uuid = "C9D10423-6820-4F07-86A9-7652B24CCFEA - a843e56cd8d683f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EliteTestTests.EstateRepositoryTests.testSaveEstateSuccessfully() -&gt; ()"
+                  moduleName = "EliteTestTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andres/Documents/Elite/EliteTest/EliteTest/EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1205">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "191E078F-99BA-4BE1-BCDA-22C96D9CC55B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EliteTestTests/Data/Repository/EstateRepositoryTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "EstateRepositoryTests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F901F45-A92F-4958-B8E7-6752559F33D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EliteTestTests/Presentation/ViewModels/AddEstateViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "testCreateEstate_failureSave()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD77947E-EF6F-4328-8FB3-B838FCB8A4B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EliteTest/Presentation/ViewModels/AddEstateViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "createEstate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
