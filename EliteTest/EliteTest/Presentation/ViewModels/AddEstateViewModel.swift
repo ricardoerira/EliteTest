@@ -2,7 +2,7 @@
 //  AddEstateViewModel.swift
 //  EliteTest
 //
-//  Created by andres on 8/04/25.
+//  Created by Wilson Ricardo Erira  on 8/04/25.
 //
 
 import Foundation
@@ -24,7 +24,7 @@ class AddEstateViewModel: ObservableObject {
     @Published var bathrooms: Int = 1
     @Published var title: String = ""
     @Published var description: String = ""
-    @Published var propertyLocation: CLLocationCoordinate2D?
+    @Published var estateLocation: CLLocationCoordinate2D?
     @Published var isFormValid: Bool = false
     @Published var isTitleValid: Bool = true
     @Published var isLocationValid: Bool = true
@@ -46,7 +46,7 @@ class AddEstateViewModel: ObservableObject {
     }
     
     func observe() {
-        Publishers.CombineLatest4($title, $description, $selectedImages, $propertyLocation)
+        Publishers.CombineLatest4($title, $description, $selectedImages, $estateLocation)
             .dropFirst()
             .sink { [weak self] title, description, selectedImages, location in
                 self?.validateFields(title: title, description: description, selectedImages: selectedImages, location: location)
@@ -72,10 +72,10 @@ class AddEstateViewModel: ObservableObject {
         title = ""
         description = ""
         selectedImages = []
-        propertyLocation = nil
+        estateLocation = nil
     }
     
-    func createProperty() {
+    func createEstate() {
         isLoading = true
         
         let estateModel = EstateModel(
@@ -86,7 +86,7 @@ class AddEstateViewModel: ObservableObject {
             bathrooms: bathrooms,
             title: title,
             description: description,
-            photos: selectedImages.compactMap { $0.image.jpegData(compressionQuality: 0.8) }, location: "\(String(describing: propertyLocation?.latitude)),\(String(describing: propertyLocation?.longitude))"
+            photos: selectedImages.compactMap { $0.image.jpegData(compressionQuality: 0.8) }, location: "\(String(describing: estateLocation?.latitude)),\(String(describing: estateLocation?.longitude))"
         )
         
         repository.save(estate: estateModel)
@@ -101,7 +101,7 @@ class AddEstateViewModel: ObservableObject {
                     self?.clearForm()
                 case .failure(let error):
                     self?.isSuccessAlert = false
-                    self?.alertMessage = "Error: \(error.localizedDescription)"
+                    self?.alertMessage = error.errorDescription ?? ""
                     self?.showAlert = true
                 }
             } receiveValue: {}

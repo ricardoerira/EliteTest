@@ -2,7 +2,7 @@
 //  EstateRepositoryTest.swift
 //  EliteTestTests
 //
-//  Created by andres on 9/04/25.
+//  Created by Wilson Ricardo Erira  on 9/04/25.
 //
 
 import XCTest
@@ -171,7 +171,7 @@ final class TestableEstateRepository: EstateRepository {
                 do {
                     try context.save()
                 } catch {
-                    promise(.failure(.saveFailed("Failed to save estate: \(error.localizedDescription)")))
+                    promise(.failure(.saveFailed))
                     return
                 }
 
@@ -180,7 +180,7 @@ final class TestableEstateRepository: EstateRepository {
                     try self.saveImages(photos: estate.photos, estateEntity: estateEntity, context: context)
                     promise(.success(()))
                 } catch {
-                    promise(.failure(.imageSaveFailed("Failed to save images: \(error.localizedDescription)")))
+                    promise(.failure(.imageSaveFailed))
                 }
             }
         }

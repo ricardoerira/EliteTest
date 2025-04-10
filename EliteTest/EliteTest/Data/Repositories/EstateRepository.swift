@@ -2,18 +2,31 @@
 //  EstateRepository.swift
 //  EliteTest
 //
-//  Created by andres on 8/04/25.
+//  Created by Wilson Ricardo Erira  on 8/04/25.
 //
 
 import Foundation
 import Combine
 import CoreData
 
-enum EstateRepositoryError: Error {
-    case saveFailed(String)
-    case imageSaveFailed(String)
+enum EstateRepositoryError: Error, LocalizedError {
+    case saveFailed
+    case imageSaveFailed
     case unknown
+    
+    var errorDescription: String? {
+        switch self {
+        case .saveFailed:
+            return "No se ha podido guardar la propiedad."
+        case .imageSaveFailed:
+            return "No se ha podido guardar la imagen."
+        case .unknown:
+            return "Desconocido"
+        }
+    }
+
 }
+
 
 class EstateRepository: EstateRepositoryProtocol {
     private let persistentContainer: NSPersistentContainer
@@ -40,7 +53,7 @@ class EstateRepository: EstateRepositoryProtocol {
                     do {
                         try context.save()
                     } catch {
-                        promise(.failure(.saveFailed("Failed to save estate: \(error.localizedDescription)")))
+                        promise(.failure(.saveFailed))
                         return
                     }
 
@@ -49,7 +62,7 @@ class EstateRepository: EstateRepositoryProtocol {
                         try self.saveImages(photos: estate.photos, estateEntity: estateEntity, context: context)
                         promise(.success(()))
                     } catch {
-                        promise(.failure(.imageSaveFailed("Failed to save images: \(error.localizedDescription)")))
+                        promise(.failure(.imageSaveFailed))
                     }
                 }
             }

@@ -2,7 +2,7 @@
 //  AddEstateView.swift
 //  EliteTest
 //
-//  Created by andres on 8/04/25.
+//  Created by Wilson Ricardo Erira  on 8/04/25.
 //
 
 import SwiftUI
@@ -164,7 +164,7 @@ struct AddEstateView: View {
             Text("Ubicación de la Propiedad")
                 .font(.title3.bold())
                 .foregroundColor(.white)
-            GoogleMapView(selectedCoordinate: $viewModel.propertyLocation)
+            GoogleMapView(selectedCoordinate: $viewModel.estateLocation)
                 .frame(height: 300)
                 .cornerRadius(8)
                 .overlay(RoundedRectangle(cornerRadius: 8)
@@ -206,7 +206,7 @@ struct AddEstateView: View {
     
     @ViewBuilder private func registerButton() -> some View {
         Button(action: {
-            viewModel.createProperty()
+            viewModel.createEstate()
         }) {
             Text("Guardar Propiedad")
                 .font(.headline)
